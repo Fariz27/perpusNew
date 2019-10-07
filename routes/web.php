@@ -20,5 +20,8 @@ Route::get('create/buku', function(){
     return view('buku.create');
 });
 Route::get('edit/buku/{id}', 'BookController@edit');
+Route::get('pinjam', 'PinjamController@index');
+Route::get('create/pinjam', 'PinjamController@pinjam');
+
 
 

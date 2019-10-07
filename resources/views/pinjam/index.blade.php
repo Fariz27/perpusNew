@@ -134,14 +134,14 @@
                 <td>{{ $pinjam->id }}</td>
                 <td>
                   {{ !empty($pinjam->anggota->id) ?
-                  $pinjam->anggota->nama_anggota : '-' }}
+                  $pinjam->anggota->name : '-' }}
                 </td>
                 <td>
                   {{ !empty($pinjam->buku->id) ?
-                  $pinjam->buku->judul : '-' }}
+				  $pinjam->buku->tittle : '-' }}
                 </td>
-                <td>{{ $pinjam->tanggal_pinjam }}</td>
-                <td>{{ $pinjam->tanggal_kembali }}</td>
+                <td>{{ $pinjam->tanggalpinjam }}</td>
+                <td>{{ $pinjam->tanggalkembali }}</td>
                 <td><a class="btn btn-success btn-sm" href="{{ url('detail/pinjam/' . $pinjam->id) }}">Detail</a>
                 <a class="btn btn-warning btn-sm" href="{{ url('edit/pinjam/' . $pinjam->id) }}">Edit</a>
                 <a class="btn btn-danger btn-sm" href="{{ url('delete/pinjam/' . $pinjam->id) }}" onclick="confirm('Are you sure you want to delete this?')">Delete</a></td>

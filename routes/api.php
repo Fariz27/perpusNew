@@ -16,6 +16,7 @@ Route::post('register', 'UserController@register');
 Route::post('login', 'UserController@login');
 Route::post('book', 'BookController@create');
 Route::post('update/buku/{id}', 'BookController@editp');
+Route::post('pinjam', 'PinjamController@ppinjam');
 
 Route::get('bookall', 'BookController@bookAuth')->middleware('jwt.verify');
 Route::get('user', 'UserController@getAuthenticatedUser')->middleware('jwt.verify');
